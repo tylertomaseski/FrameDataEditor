@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Slider picking-mode="Ignore" label="AnimationTime" value="42" high-value="100" />
+    <uie:EnumField label="Animation" value="Center" />
+    <ui:VisualElement name="Spacer" style="height: 6px; background-color: rgba(255, 255, 255, 0.23); margin-bottom: 5px; margin-top: 5px;" />
+    <ui:ScrollView style="flex-grow: 1;">
+        <ui:VisualElement style="height: 21px; flex-direction: row; width: 436px;">
+            <ui:MinMaxSlider picking-mode="Ignore" label="Channel 1" min-value="10" max-value="12" low-limit="-10" high-limit="40" style="flex-grow: 1;" />
+            <ui:Button text="-" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="AddTriggerTimer" style="height: 24px; flex-direction: row; width: 436px; justify-content: flex-end;">
+            <ui:Button text="+" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement style="height: 24px; flex-direction: row; width: 436px;">
+            <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" style="flex-grow: 1;" />
+            <ui:Button text="-" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="AddTriggerTimer" style="height: 24px; flex-direction: row; width: 436px; justify-content: flex-end;">
+            <ui:Button text="+" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement style="height: 24px; flex-direction: row; width: 436px;">
+            <uie:CurveField label="Curve" style="flex-grow: 1;" />
+            <ui:Button text="-" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="AddTriggerTimer" style="height: 24px; flex-direction: row; width: 436px; justify-content: flex-end;">
+            <ui:Button text="+" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>
