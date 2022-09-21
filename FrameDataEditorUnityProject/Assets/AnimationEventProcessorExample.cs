@@ -13,6 +13,16 @@ public class AnimationEventCollection : ScriptableObject
 		public float TimeEnd;
 		public byte EventID;
 	}
+	public struct Event
+	{
+		public float Time;
+		public byte EventID;
+	}
+	public struct EventCurve
+	{
+		public AnimationCurve Curve;
+		public byte EventID;
+	}
 
 	[NonSerialized]
 	public short ID; //asigned at runtime
@@ -39,6 +49,16 @@ public static class AnimationManager
 	static int[] animationEventDataID;
 	static AnimationEventFlags[] animationEventFlags;
 	static float[] animationTimers;
+
+	static AnimationEventFlags[] GetAllFlags()
+	{
+		return animationEventFlags;
+	}
+
+	static AnimationEventFlags GetFlags(int id)
+	{
+		return animationEventFlags[id];
+	}
 
 	static void UpdateAll(float deltaTime)
 	{
@@ -84,11 +104,6 @@ public static class AnimationManager
 				}
 			}
 		}
-	}
-
-	static AnimationEventFlags GetFlags(int id)
-	{
-		return animationEventFlags[id];
 	}
 }
 
